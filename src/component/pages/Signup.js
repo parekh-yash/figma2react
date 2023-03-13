@@ -66,6 +66,7 @@ function Signup() {
                           First Name
                         </label>
                         <Field
+                          className="signup-field"
                           type="firstName"
                           placeholder="Enter First Name"
                           name="firstName"
@@ -77,6 +78,7 @@ function Signup() {
                           Last Name
                         </label>
                         <Field
+                          className="signup-field"
                           type="lastName"
                           placeholder="Enter Last Name"
                           name="lastName"
@@ -89,6 +91,7 @@ function Signup() {
                         Email
                       </label>
                       <Field
+                        className="signup-field"
                         type="email"
                         placeholder="Ouly12@gmail.com"
                         name="email"
@@ -100,6 +103,7 @@ function Signup() {
                         Mobile Number
                       </label>
                       <Field
+                        className="signup-field"
                         type="tel"
                         placeholder="Enter Mobile Number"
                         name="mobile"
@@ -111,6 +115,7 @@ function Signup() {
                         Password
                       </label>
                       <Field
+                        className="signup-field"
                         type="password"
                         placeholder="********"
                         name="passord"

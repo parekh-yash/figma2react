@@ -111,7 +111,7 @@ h6 {
 p {
   color: #929eae;
 }
-input[type="email"],
+/* input[type="email"],
 input[type="password"] {
   border: 1px solid rgba(99, 91, 255, 0.12);
   background: rgba(243, 242, 255, 0.5);
@@ -119,14 +119,21 @@ input[type="password"] {
   padding: 12px;
   justify-content: center;
   border-radius: 8px;
-}
+} */
 .login-label {
   display: flex;
   flex-flow: wrap;
   margin: 8px;
   margin-left: 0;
 }
-
+.login-field {
+  border: 1px solid rgba(99, 91, 255, 0.12);
+  background: rgba(243, 242, 255, 0.5);
+  width: 95%;
+  padding: 12px;
+  justify-content: center;
+  border-radius: 8px;
+}
 .login-button {
   display: flex;
   flex-direction: row;

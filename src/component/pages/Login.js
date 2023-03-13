@@ -50,7 +50,7 @@ function login() {
                         Email
                       </label>
                       <Field
-                        className="login-email"
+                        className="login-field"
                         type="email"
                         placeholder="Ouly12@gmail.com"
                         name="email"
@@ -62,9 +62,10 @@ function login() {
                         Password
                       </label>
                       <Field
+                        className="login-field"
                         type="password"
                         placeholder="********"
-                        name="password"
+                        ngame="password"
                       />
                       <ErrorMessage name="password" />
                     </div>
