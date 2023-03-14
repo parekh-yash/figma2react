@@ -1,4 +1,131 @@
-body {
+.signup-circle-1 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: -268px;
+  top: -186px;
+  border-radius: 50%;
+  background: #f0eff9;
+  z-index: 0;
+}
+.signup-circle-2 {
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: -114px;
+  top: -328px;
+  border: 0.5px solid #2563eb;
+  z-index: 0;
+}
+.signup-circle-3 {
+  position: fixed;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  left: 1450px;
+  top: 804px;
+  background: #f0eff9;
+  z-index: 0;
+}
+.signup-circle-4 {
+  box-sizing: border-box;
+  position: fixed;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  left: 1670px;
+  top: 685px;
+  border: 0.5px solid #2563eb;
+  z-index: 0;
+}
+.signup-box {
+  z-index: 1;
+}
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-card {
+  display: flex;
+  max-width: 584px;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: white;
+  padding: 42px;
+}
+.signup-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.signup-form-group {
+  margin: 0;
+  padding: 0;
+}
+.signup-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+.signup-firstName,
+.signup-lastName,
+.signup-email,
+.signup-mobile,
+.signup-password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.signup-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  width: 100%;
+  height: 48px;
+  margin-top: 24px;
+  font-size: medium;
+  color: white;
+  background: #2563eb;
+  border-radius: 8px;
+}
+.signup-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rememberme-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.signup-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(243, 242, 255, 0.5);
+  border: 1px solid rgba(99, 91, 255, 0.12);
+  border-radius: 8px;
+}
+h1 {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0px;
+}
+
+/**/
+
+/* body {
   overflow: hidden;
 }
 .signup-container {
@@ -12,9 +139,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.signup-card {
-}
-.circle-1 {
+.signup-circle-1 {
   position: fixed;
   width: 500px;
   height: 500px;
@@ -73,7 +198,10 @@ h6 {
 
 .signup-email,
 .signup-password,
-.signup-submit {
+.signup-submit,
+.signup-firstName,
+.signup-lastName,
+.signup-mobile {
   font-size: small;
   font-weight: 600;
   display: flex;
@@ -112,43 +240,43 @@ p {
   justify-content: space-between;
 }
 /* TITLE */
-.signup-title {
+/* .signup-title {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
-}
+} */
 /* FORM */
-.signup-form-group {
+/* .signup-form-group {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
+} */
 
 /* FIELDS */
-.signup-field {
+/* .signup-field {
   border: 1px solid rgba(99, 91, 255, 0.12);
   background: rgba(243, 242, 255, 0.5);
   width: 95%;
   padding: 12px;
   justify-content: flex-start;
   border-radius: 8px;
-}
+} */
 /* FIRST NAME */
-.signup-firstName {
+/* .signup-firstName {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
+} */
 
-.signup-label {
+/* .signup-label {
   display: flex;
   flex-flow: wrap;
   margin: 8px;
   margin-left: 0;
-}
+} */
 
-.signup-button {
+/* .signup-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -161,8 +289,8 @@ p {
   color: white;
   background: #2563eb;
   border-radius: 8px;
-}
-button:hover {
+} */
+/* button:hover {
   background: #3e76ef;
   cursor: pointer;
-}
+} */

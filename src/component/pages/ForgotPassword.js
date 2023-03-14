@@ -1,7 +1,94 @@
 import React from "react";
+import "../css/forgotpassword.css";
+import { useNavigate } from "react-router-dom";
 
 function ForgotPassword() {
-  return <div>how did you ForgotPassword</div>;
+  const nav = useNavigate();
+  return (
+    <div>
+      <button className="floating-btn" onClick={() => nav("/")}>
+        WON'T HAPPEN AGAIN{" "}
+      </button>
+      <marquee>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+        <h1>
+          HOW DID YOU FORGOT YOUR PASSWORD? HOW DID YOU FORGOT YOUR PASSWORD?HOW
+          DID YOU FORGOT YOUR PASSWORD?
+        </h1>
+      </marquee>
+    </div>
+  );
 }
 
 export default ForgotPassword;

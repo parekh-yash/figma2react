@@ -3,44 +3,43 @@ import "../css/login.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Circles from "./components/Circles";
 
-const validation = () => {
-  Yup.object({
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
-  });
-};
+const validation = Yup.object().shape({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
+});
 
-//..............
+const Login = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (values, { setSubmitting }) => {
+    console.log(values);
+    alert(JSON.stringify(values));
+    setSubmitting(false);
+    navigate("/Dashboard");
+  };
 
-function login() {
   return (
     <>
-      <div className="circle-1" />
-      <div className="circle-2" />
-      <div className="circle-3" />
-      <div className="circle-4" />
-
+      <Circles />
       <div className="login-container">
         <div className="login-box">
           <div className="login-card">
             <div className="login-title">
               <h1>
-                Welcome back,<b> Ouly.AI</b>
+                Welcome back,<b>Ouly.AI</b>
               </h1>
               <h6>Welcome back! please enter your details.</h6>
             </div>
             <Formik
               initialValues={{ email: "", password: "" }}
               validationSchema={validation}
-              onSubmit={(values, { setSubmitting }) => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }}
+              onSubmit={handleSubmit}
             >
               {({ isSubmitting }) => (
                 <Form>
@@ -55,7 +54,7 @@ function login() {
                         placeholder="Ouly12@gmail.com"
                         name="email"
                       />
-                      <ErrorMessage name="email" />
+                      <ErrorMessage className="errorMessage" name="email" />
                     </div>
                     <div className="login-password">
                       <label className="login-label" htmlFor="password">
@@ -65,12 +64,12 @@ function login() {
                         className="login-field"
                         type="password"
                         placeholder="********"
-                        ngame="password"
+                        name="password"
                       />
                       <ErrorMessage name="password" />
                     </div>
                     <div className="login-options">
-                      <label htmlFor="checkbox">
+                      <label className="rememberme-label" htmlFor="checkbox">
                         <Field
                           type="checkbox"
                           id="checkbox"
@@ -81,7 +80,13 @@ function login() {
                       <Link to="/ForgotPassword">Forgot Password?</Link>
                     </div>
                     <div className="login-submit">
-                      <button className="login-button">Login</button>
+                      <button
+                        className="login-button"
+                        type="submit"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Logging In..." : "Login"}
+                      </button>
                     </div>
                   </div>
                 </Form>
@@ -97,6 +102,6 @@ function login() {
       </div>
     </>
   );
-}
+};
 
-export default login;
+export default Login;

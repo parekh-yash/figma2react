@@ -3,38 +3,42 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import "../css/signup.css";
+import Circles from "./components/Circles";
 
-const phoneRegExp = 0;
-const validation = () => {
-  Yup.object().shape({
-    firstName: Yup.string()
-      .firstName("Please Enter Your First Name")
-      .required("First Name is Required"),
-    lastName: Yup.string()
-      .fastName("Please Enter Your First Name")
-      .required("First Name is Required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    mobile: Yup.string()
-      .mobile.matches(phoneRegExp, "Invalid phone number")
-      .require("Mobile number is required"),
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
-  });
-};
+const validation = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, "Please Enter Your First Name")
+    .required("First Name is Required"),
+  lastName: Yup.string()
+    .min(2, "Please Enter Your Last Name")
+    .required("Last Name is Required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  mobile: Yup.string()
+    .matches(
+      /^[0-9]{10}$/,
+      "Invalid phone number, please enter 10 digits without spaces or hyphens"
+    )
+    .required("Mobile number is required"),
+  password: Yup.string()
+    .min(6, "Password must be at least 6 characters")
+    .required("Password is required"),
+});
 
 //..............
 
-function Signup() {
+const Signup = ({ history }) => {
+  const handleSubmit = (values, { setSubmitting }) => {
+    console.log(values);
+    // alert(JSON.stringify(values, null, 2));
+    setSubmitting(false);
+    history.push({ pathname: "/Dashboard", state: values }); // Redirect to dashboard page on successful login
+  };
+
   return (
     <>
-      <div className="circle-1" />
-      <div className="circle-2" />
-      <div className="circle-3" />
-      <div className="circle-4" />
-
+      <Circles />
       <div className="signup-container">
         <div className="signup-box">
           <div className="signup-card">
@@ -52,10 +56,7 @@ function Signup() {
                 passwork: "",
               }}
               validationSchema={validation}
-              onSubmit={(values, { setSubmitting }) => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }}
+              onSubmit={handleSubmit}
             >
               {({ isSubmitting }) => (
                 <Form>
@@ -138,6 +139,6 @@ function Signup() {
       </div>
     </>
   );
-}
+};
 
 export default Signup;
